@@ -1,7 +1,7 @@
 import { RadioGroup } from '@headlessui/react';
 import * as React from 'react';
 
-import useTree, { TreeSelection } from '@/store';
+import useTree, { TreeSelection } from '@/store/TreeStore';
 
 import { Selection } from './TreeInputSection';
 
@@ -55,7 +55,7 @@ export default function BaseInput({
 
   return (
     <div className='w-full '>
-      <div className='w-full max-w-md mx-auto'>
+      <div className='w-full mx-auto'>
         <RadioGroup value={selected} onChange={(item) => updateTree(item)}>
           <RadioGroup.Label className='sr-only'>Server size</RadioGroup.Label>
           <div className='space-y-2'>

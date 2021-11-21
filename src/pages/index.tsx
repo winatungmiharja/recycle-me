@@ -15,7 +15,7 @@ export default function HomePage(): JSX.Element {
         <section>
           <div className='flex flex-wrap'>
             <div className='w-full px-6 py-6 bg-gray-800 lg:w-8/12 rounded-3xl'>
-              <SectionText title={'Home'} subTitle={'12 Desember 2021'} />
+              <SectionText title={'Home🍀'} subTitle={'12 Desember 2021'} />
               <AchievementSection />
               <CategorySection />
             </div>

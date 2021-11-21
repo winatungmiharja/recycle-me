@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { useRouter } from 'next/router';
+import Router from 'next/router';
 import * as React from 'react';
 import Split from 'react-split';
 
@@ -9,143 +11,76 @@ import VideoSection from '@/components/craft/VideoSection';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
-export default function CraftSessionPage() {
-  const data = {
-    id: '53060',
-    name: 'Burek',
-    category: 'Side',
-    area: 'Croatian',
-    instructions: [
-      {
-        id: '0',
-        step: 'Fry the finely chopped onions and minced meat in oil',
-        checked: false,
-      },
-      {
-        id: '1',
-        step: 'Add the salt and pepper',
-        checked: false,
-      },
-      {
-        id: '2',
-        step: 'Grease a round baking tray and put a layer of pastry in it',
-        checked: false,
-      },
-      {
-        id: '3',
-        step: 'Cover with a thin layer of filling and cover this with another layer of filo pastry which must be well coated in oil',
-        checked: false,
-      },
-      {
-        id: '4',
-        step: 'Put another layer of filling and cover with pastry',
-        checked: false,
-      },
-      {
-        id: '5',
-        step: 'When you have five or six layers, cover with filo pastry, bake at 200ºC/392ºF for half an hour and cut in quarters and serve.',
-        checked: false,
-      },
-    ],
-    tags: ['Streetfood', ' Onthego'],
-    image: 'https://www.themealdb.com/images/media/meals/tkxquw1628771028.jpg',
-    youtube: 'https://www.youtube.com/watch?v=YsJXZwE5pdY',
-    ingredients: [
-      {
-        id: 1,
-        name: 'Filo Pastry',
-        qty: '1 Packet',
-        checked: false,
-      },
-      {
-        id: 2,
-        name: 'Minced Beef',
-        qty: '150g',
-        checked: false,
-      },
-      {
-        id: 3,
-        name: 'Onion',
-        qty: '150g',
-        checked: false,
-      },
-      {
-        id: 4,
-        name: 'Oil',
-        qty: '40g',
-        checked: false,
-      },
-      {
-        id: 5,
-        name: 'Salt',
-        qty: 'Dash',
-        checked: false,
-      },
-      {
-        id: 6,
-        name: 'Pepper',
-        qty: 'Dash',
-        checked: false,
-      },
-    ],
-    source:
-      'https://www.visit-croatia.co.uk/croatian-cuisine/croatian-recipes/',
-    isDone: false,
-  };
-  const [isVideoMode, setIsVideoMode] = React.useState(false);
-  const [isStepMode, setIsStepMode] = React.useState(false);
-  const [allSize, setAllSize] = React.useState([50, 50]);
-  const [leftSize, setLeftSize] = React.useState([40, 60]);
-  const [rightSize, setRightSize] = React.useState([50, 50]);
+import useCraft, { CraftSelection } from '@/store/CraftStore';
 
-  const [isIngredientCompleted, setIsIngredientCompleted] =
-    React.useState(false);
-  const videoModeWindow = () => {
-    if (isVideoMode) {
-      setAllSize([50, 50]);
-      setRightSize([50, 50]);
-    } else {
-      setAllSize([0, 100]);
-      setRightSize([100, 0]);
-    }
-    setIsVideoMode(!isVideoMode);
+export default function CraftSessionPage() {
+  const store = useCraft();
+  const router = useRouter();
+  const getIdFromCraft = (
+    crafts: CraftSelection[],
+    id: number
+  ): CraftSelection => {
+    const data = crafts.filter((item) => item.id === id);
+    return data[0];
   };
-  const stepModeWindow = () => {
-    if (isStepMode) {
-      setLeftSize([40, 60]);
+  const index = Number(router.query.id);
+  const data = getIdFromCraft(store.crafts, index);
+
+  const fetchInformation = async () => {
+    const fetchCraft = await fetch(
+      'https://recyle-web.herokuapp.com/information/showInformation.php'
+    );
+    const res = await fetchCraft.json();
+    if (res.isSuccess) {
+      store.setCrafts(res.data);
     } else {
-      setLeftSize([0, 100]);
+      console.error(res.error);
     }
-    setIsStepMode(!isStepMode);
   };
+
+  React.useEffect(() => {
+    fetchInformation();
+  }, []);
+
   return (
     <Layout>
       <Seo templateTitle='Home' />
       <main>
         <section>
           {/* <SessionModal isOpen={isOpen} onClose={onClose} img={data.image} /> */}
-          <Split className='flex' sizes={allSize} minSize={0} gutterSize={16}>
+          {data && (
             <Split
-              sizes={leftSize}
-              gutterSize={16}
+              className='flex flex-col lg:flex-row'
+              sizes={[100, 100]}
               minSize={0}
-              direction='vertical'
-              style={{ height: 'calc(100vh - 105px)' }}
-            >
-              <InfoSection />
-              <StepSection />
-            </Split>
-            <Split
-              sizes={rightSize}
               gutterSize={16}
-              minSize={0}
-              direction='vertical'
-              style={{ height: 'calc(100vh - 105px)' }}
             >
-              <VideoSection />
-              <TodoSection />
+              <Split
+                sizes={[40, 60]}
+                gutterSize={16}
+                minSize={0}
+                direction='vertical'
+                style={{
+                  height: 'calc(100vh - 105px)',
+                }}
+              >
+                <InfoSection value={data} />
+                <StepSection value={data} />
+              </Split>
+              <Split
+                sizes={[50, 50]}
+                gutterSize={16}
+                minSize={0}
+                direction='vertical'
+                style={{
+                  height: 'calc(100vh - 105px)',
+                }}
+              >
+                <VideoSection value={data} />
+                <TodoSection value={data} />
+              </Split>
             </Split>
-          </Split>
+          )}
         </section>
       </main>
     </Layout>

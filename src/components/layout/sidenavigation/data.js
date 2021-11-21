@@ -1,40 +1,20 @@
-import ArchivesIcon from './icons/archives';
-import CreditsIcon from './icons/credits';
-import DocumentationIcon from './icons/documentation';
-import HomeIcon from './icons/home';
-import SettingsIcon from './icons/settings';
-import StatusIcon from './icons/status';
+import { FiFeather, FiHome, FiPenTool } from 'react-icons/fi';
 
 const data = [
   {
     title: 'Home',
-    icon: <HomeIcon />,
+    icon: <FiHome size={25} />,
     link: '/',
   },
   {
     title: 'Craft',
-    icon: <StatusIcon />,
+    icon: <FiPenTool size={25} className='-rotate-90' />,
     link: '/craft',
   },
   {
     title: 'Forest',
-    icon: <ArchivesIcon />,
+    icon: <FiFeather size={25} />,
     link: '/forest',
-  },
-  {
-    title: 'Credits',
-    icon: <CreditsIcon />,
-    link: '/admin/credits',
-  },
-  {
-    title: 'Settings',
-    icon: <SettingsIcon />,
-    link: '/admin/settings',
-  },
-  {
-    title: 'Documentation',
-    icon: <DocumentationIcon />,
-    link: '/admin/documentation',
   },
 ];
 

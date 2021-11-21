@@ -2,7 +2,7 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
-import { CategoryType } from '@/components/section/CategorySection';
+import { CategoryType } from '@/store/TrashStore';
 
 export default function CategoryCard({ value }: { value: CategoryType }) {
   return (
@@ -18,14 +18,8 @@ export default function CategoryCard({ value }: { value: CategoryType }) {
             <p className='m-0 text-sm font-bold'>Progress</p>
             <div className='w-full h-1 mx-0 my-2 overflow-hidden bg-white rounded-md'>
               <span
-                className={clsx('block w-7/12 h-1 rounded-md', {
-                  'bg-yellow-700': value.theme === 'yellow',
-                  'bg-blue-700': value.theme === 'blue',
-                  'bg-red-700': value.theme === 'red',
-                  'bg-purple-700': value.theme === 'purple',
-                  'bg-green-700': value.theme === 'green',
-                  'bg-gray-700': value.theme === 'gray',
-                })}
+                style={{ width: `${value.progress}%` }}
+                className={clsx('block  h-1 rounded-md bg-purple-700')}
               />
             </div>
             <p className='m-0 text-sm font-bold text-right'>{value.progress}</p>
@@ -45,20 +39,16 @@ export default function CategoryCard({ value }: { value: CategoryType }) {
             </div>
             <div
               className={clsx(
-                'flex flex-shrink-0 px-4 py-2 text-sm font-bold rounded-lg',
-                {
-                  'text-yellow-200': value.theme === 'yellow',
-                  'text-blue-200': value.theme === 'blue',
-                  'text-red-200': value.theme === 'red',
-                  'text-purple-200': value.theme === 'purple',
-                  'text-green-200': value.theme === 'green',
-                  'text-gray-200': value.theme === 'gray',
-                }
+                'flex flex-shrink-0 px-4 py-2 text-sm font-bold rounded-lg'
               )}
             >
               {value.item} Item
             </div>
           </div>
+          <p className='flex items-center w-full gap-2 ml-auto text-sm '>
+            reward : {value.reward}{' '}
+            <img src='/images/coin.svg' alt='coin' className='w-6' />
+          </p>
         </div>
       </div>
     </div>

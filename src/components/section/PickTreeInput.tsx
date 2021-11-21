@@ -1,7 +1,7 @@
 import { RadioGroup } from '@headlessui/react';
 import * as React from 'react';
 
-import useTree from '@/store';
+import useTree from '@/store/TreeStore';
 const treeSection: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function Example() {

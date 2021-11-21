@@ -47,6 +47,10 @@ export default function TopNavigation() {
             </div>
           </div>
           <div className='relative flex items-center justify-end w-full p-1 ml-5 sm:mr-0 sm:right-auto'>
+            <p className='flex items-center gap-2 mt-1 mr-4 font-medium text-white'>
+              200
+              <img src='/images/coin.svg' alt='coin' className='w-6' />
+            </p>
             <a href='#' className='block pr-5'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -95,14 +99,7 @@ export default function TopNavigation() {
                 />
               </svg>
             </a>
-            <a href='#' className='relative block'>
-              {/* <img
-                alt='Maurice Lokumba'
-                src='/images/1.jpg'
-                className='object-cover w-10 h-10 mx-auto rounded-full'
-              /> */}
-              <p>ini</p>
-            </a>
+            <h3>Recycle.me</h3>
           </div>
         </div>
       </div>

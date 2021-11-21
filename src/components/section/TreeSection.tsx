@@ -2,7 +2,7 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
-import useTree from '@/store';
+import useTree from '@/store/TreeStore';
 
 export default function TreeSection() {
   const store = useTree();

@@ -63,7 +63,7 @@ const categories: SelectionType = {
       value: 0,
       desc: 'No tree yet:(',
       img: '/images/isometric-tree-0.svg',
-      coin: 20,
+      coin: 0,
     },
     {
       id: 1,
@@ -71,7 +71,7 @@ const categories: SelectionType = {
       value: 1,
       desc: 'Beautiful Tree',
       img: '/images/isometric-tree-1.svg',
-      coin: 20,
+      coin: 150,
     },
     {
       id: 2,
@@ -79,61 +79,61 @@ const categories: SelectionType = {
       value: 2,
       desc: 'Beautiful Tree',
       img: '/images/isometric-tree-2.svg',
-      coin: 210,
+      coin: 180,
     },
     {
       id: 3,
-      name: 'Tree 3',
+      name: 'Bubble',
       value: 3,
-      desc: 'Beautiful Tree',
+      desc: 'Bubbly Tree',
       img: '/images/isometric-tree-3.svg',
-      coin: 210,
+      coin: 200,
     },
     {
       id: 4,
-      name: 'Tree 4',
+      name: 'Rectangly',
       value: 4,
       desc: 'Beautiful Tree',
       img: '/images/isometric-tree-4.svg',
-      coin: 210,
+      coin: 200,
     },
     {
       id: 5,
-      name: 'Tree 5',
+      name: 'Cupky',
       value: 5,
-      desc: 'Beautiful Tree',
+      desc: 'Delicious Tree',
       img: '/images/isometric-tree-5.svg',
-      coin: 210,
+      coin: 220,
     },
     {
       id: 6,
-      name: 'Tree 6',
+      name: 'Queen',
       value: 6,
-      desc: 'Beautiful Tree',
+      desc: 'Heart Tree',
       img: '/images/isometric-tree-6.svg',
-      coin: 210,
+      coin: 220,
     },
     {
       id: 7,
       name: 'Sign Board',
       value: 7,
-      desc: 'Beautiful Tree',
+      desc: 'Mark your forest👀',
       img: '/images/isometric-tree-7.svg',
-      coin: 210,
+      coin: 250,
     },
     {
       id: 8,
       name: 'Mushroom',
       value: 8,
-      desc: 'Beautiful Tree',
+      desc: 'Hipnotise your forest✨',
       img: '/images/isometric-tree-8.svg',
-      coin: 210,
+      coin: 250,
     },
   ],
 };
 export default function TreeInputSection() {
   return (
-    <div className='w-full max-w-md sm:px-0'>
+    <div className='w-full sm:px-0'>
       <Tab.Group>
         <Tab.List className='flex p-1 space-x-1 bg-blue-900/20 rounded-2xl'>
           {Object.keys(categories).map((category) => (

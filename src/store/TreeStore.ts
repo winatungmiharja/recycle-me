@@ -64,14 +64,14 @@ const updateTree = (
     tree: treeItem.id === item.id ? item.tree : treeItem.tree,
   }));
 
-type Store = {
+type TreeStore = {
   selectedTree: number;
   trees: TreeSelection[];
   setSelectedTree: (id: number) => void;
   update: (item: TreeSelection) => void;
 };
 
-const useTree = create<Store>((set) => ({
+const useTree = create<TreeStore>((set) => ({
   trees: userTreeSelection,
   selectedTree: 4,
   setSelectedTree(id: number) {

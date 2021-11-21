@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import Camera from './camera';
 import DashboardProvider from './provider/context';
 import Overlay from './provider/overlay';
 import SideNavigation from './sidenavigation';
@@ -21,6 +22,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className={style.mainContainer}>
             <TopNavigation />
             <main className={style.main}>{children}</main>
+            <Camera />
           </div>
         </div>
       </div>

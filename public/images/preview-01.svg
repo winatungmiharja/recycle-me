@@ -1,0 +1,38 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-852.86" y1="271.48" x2="-665.95" y2="268.25" gradientTransform="matrix(-1, 0.07, 0.05, 0.73, -661.98, -63.59)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.14" stop-color="#e5b785"/>
+      <stop offset="0.66" stop-color="#deae79"/>
+      <stop offset="0.8" stop-color="#dba975"/>
+      <stop offset="0.95" stop-color="#d29c67"/>
+      <stop offset="1" stop-color="#ce9662"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-819.72" y1="305.36" x2="-825.8" y2="495.39" gradientTransform="matrix(-1, 0.07, 0.05, 0.73, -661.98, -63.59)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.19" stop-color="#deae79"/>
+      <stop offset="0.4" stop-color="#dba975"/>
+      <stop offset="0.64" stop-color="#d29c68"/>
+      <stop offset="0.72" stop-color="#ce9662"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-795.92" y1="277.69" x2="-667.39" y2="459.04" gradientTransform="matrix(-1, 0.07, 0.05, 0.73, -661.98, -63.59)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.15" stop-color="#ce9862"/>
+      <stop offset="0.43" stop-color="#c7915a"/>
+      <stop offset="0.85" stop-color="#b47c45"/>
+      <stop offset="1" stop-color="#ac733c"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="64.76" style="fill: #f4f4f4"/>
+  <g>
+    <g>
+      <g>
+        <polygon points="52.59 73.16 117.97 55.56 203.98 76.66 149.76 98.85 52.59 73.16" style="fill: url(#linear-gradient)"/>
+        <polygon points="149.12 107.53 149.76 98.85 203.98 76.66 203.98 77.02 202.54 177.4 148.62 200.44 149.12 107.53" style="fill: url(#linear-gradient-2)"/>
+        <polygon points="52.59 73.52 52.59 73.16 149.76 98.85 149.12 107.53 148.62 200.44 52.02 171.72 52.59 73.52" style="fill: url(#linear-gradient-3)"/>
+      </g>
+      <polygon points="177.87 87.34 177.92 87.33 177.93 87.33 184.92 84.47 184.92 84.82 184.05 96.81 183.92 96.63 183.33 98.09 182.76 97.25 182.33 98.49 181.6 97.83 181.08 100.73 180.12 99.04 179.47 100.35 178.68 99.67 178.04 100.88 177.36 99.63 176.82 101.28 177.87 87.67 177.87 87.34" style="fill: #c0834b"/>
+      <polygon points="93.69 62.15 184.91 84.46 184.92 84.46 184.92 84.46 184.93 84.46 184.92 84.47 177.93 87.33 177.92 87.33 84.87 64.47 93.69 62.15" style="fill: #cf9558"/>
+    </g>
+    <path d="M204,76.65l-54.22,22.2S182.78,83.73,204,76.65Z" style="fill: #fff;opacity: 0.7000000000000001"/>
+    <path d="M148.08,98.45l-94.52-25S121.85,89.93,148.08,98.45Z" style="fill: #fff;opacity: 0.7000000000000001"/>
+    <path d="M149.11,199.51l.31-97.77S150.72,172,149.11,199.51Z" style="fill: #fff;opacity: 0.7000000000000001"/>
+  </g>
+</svg>

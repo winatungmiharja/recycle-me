@@ -14,9 +14,9 @@ export default function ForestPage() {
       <Seo templateTitle='Forest' />
       <main>
         <section>
-          <div className='flex flex-wrap text-white'>
-            <div className='w-full p-6 mt-8 lg:mt-0 lg:w-4/12 lg:pr-4'>
-              <SectionText title={'My Forest'} />
+          <div className='flex flex-wrap items-start justify-start text-white '>
+            <div className='w-full p-6 lg:mt-0 lg:w-4/12 lg:pr-4'>
+              <SectionText title={'My Forest🌳'} />
               <div className='flex flex-col items-start gap-4'>
                 <p className='mt-4'>Tree Selection</p>
                 <PickTreeInput />
@@ -24,7 +24,7 @@ export default function ForestPage() {
                 <TreeInputSection />
               </div>
             </div>
-            <div className='self-start w-full lg:w-8/12 '>
+            <div className='w-full lg:self-start lg:w-8/12 '>
               <TreeSection />
             </div>
           </div>
