@@ -50,5 +50,27 @@ For the next step, we will focus on our website to be used in a bigger community
 | Frontend Repo | [plugins/github/README.md][PlGh] |
 | Backend Repo | https://github.com/kurniacf/recyle-web |
 | ML Repo | https://github.com/hansenidden18/recycle-me |
+  
+# Snapshots
+
+|Your Customizable Forest|
+|:-:|
+|<a href="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/092/datas/original.png"><img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/092/datas/original.png" alt="Winner" width="400"></a><br /><sup><a href="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/092/datas/original.png">(view full size)</a> |
+  
+Garbage Detection System
+|:-:|
+|<a href="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/162/datas/original.png"><img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/162/datas/original.png" alt="Winner" width="400"></a><br /><sup><a href="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/162/datas/original.png">(view full size)</a> |
+
+Beautiful Dashboard to Track your Activity
+|:-:|
+|<a href="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/091/datas/original.png"><img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/091/datas/original.png" alt="Winner" width="400"></a><br /><sup><a href="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/091/datas/original.png">(view full size)</a> |
+  
+Compact Craft Session
+|:-:|
+|<a href="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/093/datas/original.png"><img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/093/datas/original.png" alt="Winner" width="400"></a><br /><sup><a href="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/093/datas/original.png">(view full size)</a> |
+  
+Curated Craft Ideas
+|:-:|
+|<a href="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/094/datas/original.png"><img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/094/datas/original.png" alt="Winner" width="400"></a><br /><sup><a href="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/748/094/datas/original.png">(view full size)</a> |
 
 
