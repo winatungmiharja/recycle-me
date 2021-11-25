@@ -45,9 +45,9 @@ For the next step, we will focus on our website to be used in a bigger community
 
 | TYPE | LINK |
 | ------ | ------ |
-| Demo | [plugins/dropbox/README.md][PlDb] |
+| Demo | https://github.com/winatungmiharja/recycle-me |
 | Backend Docs | https://documenter.getpostman.com/view/18000302/UVJWpKns |
-| Frontend Repo | [plugins/github/README.md][PlGh] |
+| Frontend Repo | https://github.com/winatungmiharja/recycle-me |
 | Backend Repo | https://github.com/kurniacf/recyle-web |
 | ML Repo | https://github.com/hansenidden18/recycle-me |
   
